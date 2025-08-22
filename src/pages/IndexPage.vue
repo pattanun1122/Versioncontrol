@@ -30,8 +30,8 @@
       <q-toggle v-model="accept" label="I accept the license and terms" />
 
       <div>
-        <q-btn label="ยืนยัน" type="submit" color="primary"/>
-        <q-btn label="เริ่มใหม่" type="reset" color="primary" flat class="q-ml-sm" />
+        <q-btn label="ยืนยันครับ" type="submit" color="primary"/>
+        <q-btn label="เริ่มใหม่ครับ" type="reset" color="primary" flat class="q-ml-sm" />
       </div>
     </q-form>
 
