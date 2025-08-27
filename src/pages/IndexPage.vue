@@ -23,7 +23,7 @@
         lazy-rules
         :rules="[
           val => val !== null && val !== '' || 'อายุ',
-          val => val > 0 && val < 100 || 'อายุ'
+          val => val > 0 && val < 100 || 'อายุเน้อครับ'
         ]"
       />
 
