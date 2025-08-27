@@ -22,7 +22,7 @@
         label="อายุ *"
         lazy-rules
         :rules="[
-          val => val !== null && val !== '' || 'อายุ',
+          val => val !== null && val !== '' || 'อายุนะจ๊ะ',
           val => val > 0 && val < 100 || 'อายุเน้อครับ'
         ]"
       />
