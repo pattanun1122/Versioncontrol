@@ -9,10 +9,10 @@
       <q-input
         filled
         v-model="name"
-        label="Your name *"
-        hint="Name and surname"
+        label="ชื่อ-สกุล *"
+        hint="ชื่อและนามสกุล"
         lazy-rules
-        :rules="[ val => val && val.length > 0 || 'Please type something']"
+        :rules="[ val => val && val.length > 0 || 'กรุณาพิมพ์ชื่อ']"
       />
 
       <q-input
@@ -22,21 +22,22 @@
         label="อายุ *"
         lazy-rules
         :rules="[
-          val => val !== null && val !== '' || 'อายุนะจ๊ะ',
-          val => val > 0 && val < 100 || 'อายุเน้อครับ'
+          val => val !== null && val !== '' || 'Please type your age',
+          val => val > 0 && val < 100 || 'Please type a real age'
         ]"
       />
 
-      <q-toggle v-model="accept" label="I accept the license and terms" />
+      <q-toggle v-model="accept" label="ยอมรับ" />
 
       <div>
-        <q-btn label="ยืนยัน" type="submit" color="primary"/>
-        <q-btn label="เริ่มใหม่" type="reset" color="primary" flat class="q-ml-sm" />
+        <q-btn label="Submit" type="submit" color="primary"/>
+        <q-btn label="Reset" type="reset" color="primary" flat class="q-ml-sm" />
       </div>
     </q-form>
 
   </div>
 </template>
+
 <script>
 import { useQuasar } from 'quasar'
 import { ref } from 'vue'
@@ -58,7 +59,7 @@ export default {
             color: 'red-5',
             textColor: 'white',
             icon: 'warning',
-            message: 'You need to accept the license and terms first'
+            message: 'คุณจำเป็นต้องยอมรับ'
           })
         }
         else {
@@ -66,7 +67,7 @@ export default {
             color: 'green-4',
             textColor: 'white',
             icon: 'cloud_done',
-            message: 'Submitted'
+            message: 'ข้อมูลได้รับการยืนยัน'
           })
         }
       },
